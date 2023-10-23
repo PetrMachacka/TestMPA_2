@@ -1,0 +1,84 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color-scheme: light dark;
+  
+    --bg-color: #FF3CAC;
+    --bg-image: linear-gradient(225deg, #d3308c 0%, #784BA0 50%, #2B86C5 100%);
+    --bg-form: #80608080;
+    --bg-button: #333333;
+    --bg-button-hover: #332333;
+    --bg-input: #A080A0;
+    --bg-input-focus: #908090;
+    --font-color: #ffffffde;
+    --button-color: white;
+    --button-border: #784BA0;
+    --input-border: white;
+  }
+  body {
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-attachment: fixed;
+  
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #root { /*jen pro toto zadání - simulujeme kontejner layout*/
+    box-sizing: border-box;
+    margin: 0;  
+    padding: 1em;
+    width: 80%;
+    min-width: 280px;
+    max-width: 720px;
+    min-height: 120px;
+  }
+  button {
+    background-color: var(--bg-button);
+    border-radius: .5em;
+    border: 2px solid transparent;
+    color: var(--button-color);
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  button:hover { 
+    border-color: var(--button-border);
+    background-color: var(--bg-button-hover)
+  }
+  input {
+    margin: 0;
+    padding: .5em;
+    border: 1px solid var(--input-border);
+    border-radius: .3em;
+    background-color: var(--bg-input);
+  }
+  input:focus {
+    background-color: var(--bg-input-focus);
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-color: #4158D0;
+      --bg-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);  
+      --bg-form: #FFFFFF80;
+      --bg-button: #FFEAEA;
+      --bg-button-hover: #FFF9F9;
+      --bg-input: #F0D0D0;
+      --bg-input-focus: #FFE0E0;
+      --font-color: #213547;
+      --button-color: black;
+      --button-border: #C850C0;
+      --input-border: black;
+    }
+  }
+  
